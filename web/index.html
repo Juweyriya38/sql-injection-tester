@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQL Injection Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ SQL Injection Tester</h1>
+    <form id="sqli-form">
+        <form id="sqli-form" method="POST" action="/scan">
+
+      <label for="url">Target URL:</label>
+      <input type="text" id="url" name="url" placeholder="http://example.com/page" required />
+
+      <label for="param">Query Parameter:</label>
+      <input type="text" id="param" name="param" placeholder="id" value="id" required />
+
+      <button type="submit">Scan</button>
+    </form>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -14,3 +14,4 @@ A beginner-friendly Python tool that scans target URLs for SQL injection vulnera
 ```bash
 python cli.py --url http://example.com/page --param id
 
+ 
